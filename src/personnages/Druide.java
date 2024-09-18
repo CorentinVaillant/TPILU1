@@ -21,6 +21,10 @@ public class Druide {
 	public String getNom() {
 		return nom;
 	}
+	
+	public int getForcePotion() {
+		return forcePotion;
+	}
 
 //Methods
 	public void parler(String texte) {

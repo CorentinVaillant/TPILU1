@@ -35,15 +35,23 @@ public class Gaulois {
 
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup(force / 3	);
+		romain.recevoirCoup((force/ 3)*effetPotion);
 	}
 
+	public void boirePotion(int effetPotion) {
+		this.effetPotion = effetPotion;
+		parler("Merci Druide, je sens que ma force est "+effetPotion+" fois décuplée.");
+	}
+	
+	
+//Main
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix",8);
 		System.out.println(asterix);
 		
 		
 		asterix.parler(asterix.prendreParole() + "Obelix, viens là mon garçon, peut tu me rammener mon sanglier sucré au sucre !");
-		asterix.frapper(new Romain("Minus", 0));
+		asterix.boirePotion(20);
+		asterix.frapper(new Romain("Minus", 10));
 	}
 }
