@@ -6,6 +6,8 @@ public class Romain {
 
 //Constructor
 	public Romain(String nom, int force) {
+		assert (force>=0);
+		
 		this.nom = nom;
 		this.force = force;
 	}
@@ -13,6 +15,10 @@ public class Romain {
 //Getter
 	public String getNom() {
 		return nom;
+	}
+	
+	public int getForce() {
+		return force;
 	}
 
 //Methods
