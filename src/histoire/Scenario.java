@@ -3,6 +3,7 @@ package histoire;
 import myUtil.Util;
 import personnages.Chef;
 import personnages.Druide;
+import personnages.Equipement;
 import personnages.Gaulois;
 import personnages.Romain;
 import personnages.Village;
@@ -11,8 +12,7 @@ public class Scenario {
 
 	public static void main(String[] args) {
 		histoire1();
-		
-
+		histoire2();
 		
 	}
 	
@@ -23,6 +23,11 @@ public class Scenario {
 		Druide panoramix = new Druide("Panoramix", 5, 10);
 		
 		Romain minus = new Romain("Minus", 6);
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.BOUCLIER);
+		minus.sEquiper(Equipement.BOUCLIER);
+		Util.println("Pendant ce temps du coté des gaulois :");
 		
 		panoramix.parler("Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 à 10.");
 		panoramix.parler("Je vais aller préparer une petite potion...");
